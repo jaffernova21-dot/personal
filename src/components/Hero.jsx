@@ -15,6 +15,7 @@ const Hero = memo(function Hero() {
   const slider = useRef(null);
   const xPercentRef = useRef(0);
   const directionRef = useRef(-1);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -116,22 +117,23 @@ const Hero = memo(function Hero() {
       </motion.div>
 
       <motion.div
-        initial={{ opacity: 0, x: 100 }}
-        animate={introComplete ? { opacity: 1, x: 0 } : {}}
-        transition={{ duration: 1, delay: 0.5 }}
+        initial={{ opacity: 0 }}
+        animate={introComplete && imageLoaded ? { opacity: 1 } : {}}
+        transition={{ duration: 0.8, delay: 1 }}
       >
         <Image
-          priority
+          fetchPriority="high"
           src={heroImg}
           alt="hero"
           className="z-[-2] absolute bottom-24 right-0 animation"
+          onLoad={() => setImageLoaded(true)}
         />
       </motion.div>
 
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={introComplete ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.6, delay: 1 }}
+        transition={{ duration: 1, delay: 1 }}
         className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-30 cursor-pointer"
       >
         <a href="#about">
