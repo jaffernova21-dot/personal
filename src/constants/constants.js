@@ -25,6 +25,17 @@ import {
   jwt,
   nextauth,
   socialSphere,
+  vega,
+  tesla,
+  shopify,
+  meta,
+  starbucks,
+  speedvitals,
+  nestjs,
+  reactNative,
+  prisma,
+  trpc,
+  postgresql,
 } from "../assets";
 
 export const navLinks = [
@@ -34,7 +45,11 @@ export const navLinks = [
   },
   {
     id: "work",
-    title: "Projects",
+    title: "Work",
+  },
+  {
+    id: "skills",
+    title: "Skills",
   },
   {
     id: "contact",
@@ -52,7 +67,7 @@ const services = [
     icon: mobile,
   },
   {
-    title: "Programmer",
+    title: "Mobile Developer",
     icon: backend,
   },
   // {
@@ -100,6 +115,10 @@ const technologies = [
     name: "MongoDB",
     icon: mongodb,
   },
+  {
+    name: "PostgreSQL",
+    icon: postgresql,
+  },
   // {
   //   name: "Three JS",
   //   icon: threejs,
@@ -116,14 +135,14 @@ const technologies = [
     name: "CSS 3",
     icon: css,
   },
-  {
-    name: "Java",
-    icon: java,
-  },
-  {
-    name: "JWT",
-    icon: jwt,
-  },
+  // {
+  //   name: "Java",
+  //   icon: java,
+  // },
+  // {
+  //   name: "JWT",
+  //   icon: jwt,
+  // },
   // {
   //   name: "NextAuth",
   //   icon: nextauth,
@@ -132,46 +151,55 @@ const technologies = [
   //   name: "figma",
   //   icon: figma,
   // },
-  // {
-  //   name: "docker",
-  //   icon: docker,
-  // },
+  {
+    name: "docker",
+    icon: docker,
+  },
+  {
+    name: "NestJS",
+    icon: nestjs,
+  },
+  { name: "React Native", icon: reactNative },
+  { name: "Prisma", icon: prisma },
+  { name: "tRPC", icon: trpc },
 ];
 
 const projects = [
   {
-    name: "InkSync",
+    name: "Vega",
     description:
-      "A real-time collaborative whiteboard web application built with NextJs, Express, and Socket.io.",
+      "A media streaming app for mobile with 1000+ GitHub stars, 400,000+ downloads, and 1300+ community members.",
     features: [
-      "Users can create a room and invite others to join the room using a unique room code.",
-      "Users can draw on the whiteboard and the changes will be reflected in real-time to all the users in the room.",
+      "Stream media from community-created extension providers.",
+      "Show Movies/Series info and rating.",
+      "Add to watchList option.",
+      "Background Downloader.",
     ],
     tags: [
       {
-        name: "NextJs",
+        name: "react-native",
         color: "blue-text-gradient",
       },
       {
-        name: "ExpressJs",
+        name: "typescript",
         color: "green-text-gradient",
       },
       {
-        name: "Socket.io",
+        name: "zustand",
         color: "pink-text-gradient",
       },
       {
-        name: "Tailwind",
+        name: "expo",
         color: "orange-text-gradient",
       },
       {
-        name: "NodeJs",
-        color: "blue-text-gradient",
+        name: "nativewind",
+        color: "purple-text-gradient",
       },
     ],
-    image: inkSync,
-    source_code_link: "https://github.com/himanshu8443/InkSync",
-    live_link: "https://www.inksync.cloud/",
+    image: vega,
+    source_code_link: "https://github.com/Zenda-Cross/vega-app",
+    live_link: "https://github.com/Zenda-Cross/vega-app",
   },
   {
     name: "Hayasaka",
@@ -179,13 +207,9 @@ const projects = [
       "A dynamic full-stack music streaming web application with Next.js 13 and MongoDB.",
     features: [
       "User authentication using NextAuth.js with JWT and OAuth providers.",
-      "Redux to Manage app state effectively.",
       "Play, pause, skip, and control the playback of songs.",
-      "Users can Create, update and delete their own playlists.",
-      "Add songs to favorites in one click.",
-      "Auto adds similar songs to the queue.",
+      "Users can Create, update and delete their own playlists and Add songs to favorites.",
       "Swipe and touch gestures for touch-responsive devices.",
-      "Display song details such as title, artist, album, and album artwork.",
       "PWA (Progressive Web App) support. ",
     ],
     tags: [
@@ -219,72 +243,39 @@ const projects = [
     live_link: "https://hayasaka.live/",
   },
   {
-    name: "Study Notion",
-    description: "Developed an educational technology website with CMS.",
+    name: "InkSync",
+    description:
+      "A real-time collaborative whiteboard web application built with NextJs, Express, and Socket.io.",
     features: [
-      "Implemented Email verification and using OTP user authentication and login/signup functionality using JWT for secure access to the platform.",
-      "Students can browse and purchase courses. Instructors can create new courses, edit existing courses, and delete courses they have created.",
-      "Integrated MongoDB database to store user information, course data, and progress tracking.",
-      "Employed RESTful API principles for seamless communication between the frontend and backend systems.",
-      "Razorpay payment integration.",
-      "PWA (Progressive Web App) support.",
+      "Users can create a room and invite others to join the room using a unique room code.",
+      "Users can draw on the whiteboard and the changes will be reflected in real-time to all the users in the room.",
+      "Save and load whiteboard sessions.",
     ],
     tags: [
       {
-        name: "react",
+        name: "NextJs",
         color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
       },
       {
         name: "ExpressJs",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Socket.io",
         color: "pink-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "Tailwind",
         color: "orange-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "NodeJs",
         color: "blue-text-gradient",
       },
-      {
-        name: "nodejs",
-        color: "green-text-gradient",
-      },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/himanshu8443/Study-Notion-master",
-    live_link: "https://studynotion.fun/",
-  },
-  {
-    name: "FlipKart Price Tracker",
-    description:
-      "Chrome extension to track FlipKart product prices and send an alert to users when prices go below the user-selected price.",
-    features: [
-      "Users can add products to the watchlist by clicking on the extension icon on the product page.",
-      "Users can set a price alert by entering the desired price for the product.",
-    ],
-    tags: [
-      {
-        name: "JavaScript",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Chrome Extension",
-        color: "green-text-gradient",
-      },
-      {
-        name: "ReactJs",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tracker,
-    source_code_link: "https://github.com/himanshu8443/FlipKart-Price-Tracker",
-    live_link:
-      "https://chromewebstore.google.com/detail/fliptrack-flipkart-price/pekpfcghlbljghaojdlajgpceebobokd?hl=en",
+    image: inkSync,
+    source_code_link: "https://github.com/himanshu8443/InkSync",
+    live_link: "https://www.inksync.cloud/",
   },
   {
     name: "Social Sphere",
@@ -326,60 +317,32 @@ const projects = [
   },
 ];
 
-// const experiences = [
-//   {
-//     title: "React.js Developer",
-//     company_name: "Starbucks",
-//     icon: starbucks,
-//     iconBg: "#383E56",
-//     date: "March 2020 - April 2021",
-//     points: [
-//       "Developing and maintaining web applications using React.js and other related technologies.",
-//       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-//       "Implementing responsive design and ensuring cross-browser compatibility.",
-//       "Participating in code reviews and providing constructive feedback to other developers.",
-//     ],
-//   },
-//   {
-//     title: "React Native Developer",
-//     company_name: "Tesla",
-//     icon: tesla,
-//     iconBg: "#E6DEDD",
-//     date: "Jan 2021 - Feb 2022",
-//     points: [
-//       "Developing and maintaining web applications using React.js and other related technologies.",
-//       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-//       "Implementing responsive design and ensuring cross-browser compatibility.",
-//       "Participating in code reviews and providing constructive feedback to other developers.",
-//     ],
-//   },
-//   {
-//     title: "Web Developer",
-//     company_name: "Shopify",
-//     icon: shopify,
-//     iconBg: "#383E56",
-//     date: "Jan 2022 - Jan 2023",
-//     points: [
-//       "Developing and maintaining web applications using React.js and other related technologies.",
-//       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-//       "Implementing responsive design and ensuring cross-browser compatibility.",
-//       "Participating in code reviews and providing constructive feedback to other developers.",
-//     ],
-//   },
-//   {
-//     title: "Full stack Developer",
-//     company_name: "Meta",
-//     icon: meta,
-//     iconBg: "#E6DEDD",
-//     date: "Jan 2023 - Present",
-//     points: [
-//       "Developing and maintaining web applications using React.js and other related technologies.",
-//       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-//       "Implementing responsive design and ensuring cross-browser compatibility.",
-//       "Participating in code reviews and providing constructive feedback to other developers.",
-//     ],
-//   },
-// ];
+const experiences = [
+  {
+    title: "Frontend Developer Intern",
+    company_name: "SpeedVitals",
+    icon: speedvitals,
+    iconBg: "#383E56",
+    date: "Feb 2025 - April 2025",
+    points: [
+      "Architected and developed the Real User Monitoring (RUM) web application from scratch using React, Vite, and Tailwind CSS.",
+      "Integrated Apache Charts to visualise complex performance datasets, providing actionable insights for business clients.",
+      "Collaborated with design and backend teams to integrate new features and enhance user experience.",
+      "Tech Stack - React, Tailwind, Vite, Apache Charts.",
+    ],
+  },
+  {
+    title: "Full Stack Developer",
+    company_name: "SpeedVitals",
+    icon: speedvitals,
+    iconBg: "#383E56",
+    date: "April 2025 - Present",
+    points: [
+      "Spearheaded the migration of the core platform from Sails.js to Next.js, reducing page load times and improving Core Web Vitals scores.",
+      "Implemented Server-Side Rendering (SSR) and Static Site Generation (SSG), resulting in a measurable boost in SEO rankings and faster Time to First Byte (TTFB).",
+    ],
+  },
+];
 
 // const testimonials = [
 //   {
@@ -411,7 +374,7 @@ const projects = [
 export {
   services,
   technologies,
-  //  experiences,
+  experiences,
   //  testimonials,
   projects,
 };

@@ -25,17 +25,26 @@ import express from "./tech/express.png";
 import java from "./tech/java.png";
 import jwt from "./tech/jwt.svg";
 import nextauth from "./tech/nextauth.png";
+import nestjs from "./tech/nestjs.svg";
+import reactNative from "./tech/react-native.png";
+import prisma from "./tech/prisma.svg";
+import trpc from "./tech/trpc.svg";
+import postgresql from "./tech/postgresql.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
+import speedvitals from "./company/speedvitals.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import inkSync from "./ink.png";
 import tracker from "./tracker.png";
 import socialSphere from "./socialSphere.png";
+import vega from "./vega.png";
+
+import rocket from "./rocket.png";
 
 export {
   logo,
@@ -68,9 +77,17 @@ export {
   inkSync,
   tracker,
   socialSphere,
+  vega,
   nextjs,
   express,
   java,
   jwt,
   nextauth,
+  rocket,
+  speedvitals,
+  nestjs,
+  reactNative,
+  prisma,
+  trpc,
+  postgresql,
 };
