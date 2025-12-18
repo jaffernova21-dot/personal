@@ -240,7 +240,7 @@ const projects = [
     ],
     image: carrent,
     source_code_link: "https://github.com/himanshu8443/hayasaka",
-    live_link: "https://hayasaka.live/",
+    live_link: "https://hayasaka.vercel.app/",
   },
   {
     name: "InkSync",
@@ -275,7 +275,7 @@ const projects = [
     ],
     image: inkSync,
     source_code_link: "https://github.com/himanshu8443/InkSync",
-    live_link: "https://www.inksync.cloud/",
+    live_link: "https://inksynk.vercel.app/",
   },
   {
     name: "Social Sphere",
