@@ -1,17 +1,58 @@
-## Interactive 3D Animated Portfolio
----
+# Interactive 3D Animated Portfolio
 
+A modern, interactive portfolio website built with Next.js,
 
 https://github.com/himanshu8443/3D-Portfolio/assets/99420590/6f11c9db-5f32-41e8-94f9-cbf52be8553e
 
+## Tech Stack
 
----
+- **Framework:** Next.js 16
+- **3D Graphics:** Three.js, React Three Fiber, React Three Drei
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion, GSAP
+- **UI Components:** React Icons, React Type Animation
+- **Smooth Scrolling:** Lenis, Locomotive Scroll
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Prerequisites
 
-## Getting Started
+Before you begin, ensure you have the following installed:
 
-First, run the development server:
+- Node.js (version 18.0 or higher)
+- npm, yarn, or pnpm package manager
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/himanshu8443/Portfolio.git
+cd portfolio
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. Set up environment variables (if needed for EmailJS):
+   Create a `.env.local` file in the root directory and add your EmailJS credentials:
+
+```
+EMAILJS_SERVICE_ID=your_service_id (get it from www.emailjs.com)
+EMAILJS_TEMPLATE_ID=your_template_id
+EMAILJS_PUBLIC_KEY=your_public_key
+```
+
+## Running the Project
+
+### Development Mode
+
+Run the development server:
 
 ```bash
 npm run dev
@@ -21,23 +62,64 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Production Build
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Build the application for production:
 
-## Learn More
+```bash
+npm run build
+# or
+yarn build
+# or
+pnpm build
+```
 
-To learn more about Next.js, take a look at the following resources:
+Start the production server:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm start
+# or
+yarn start
+# or
+pnpm start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Project Structure
 
-## Deploy on Vercel
+```
+portfolio/
+├── src/
+│   ├── app/              # Next.js app directory
+│   │   ├── layout.js     # Root layout
+│   │   ├── page.js       # Home page
+│   │   └── globals.css   # Global styles
+│   ├── components/       # React components
+│   │   ├── canvas/       # 3D canvas components
+│   │   ├── hoc/          # Higher-order components
+│   │   └── ...           # Other components
+│   ├── constants/        # Constants and configuration
+│   ├── assets/           # Images and static assets
+│   └── utils/            # Utility functions
+├── public/               # Public static files
+└── ...                   # Config files
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Customization
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. **Update Personal Information:** Edit [src/constants/constants.js](src/constants/constants.js) to add your personal details, projects, and experience.
+
+2. **Add/Remove Sections:** Modify the [src/app/page.js](src/app/page.js) file to include or exclude sections such as About, Projects, Skills, Testimonials, Experience, and Contact.
+
+3. **Modify Components:** Customize individual components in the [src/components](src/components) directory.
+
+4. **Styling:** Adjust colors and styles in [tailwind.config.js](tailwind.config.js) and [src/app/globals.css](src/app/globals.css).
+
+## License
+
+This project is open source and available under the MIT License.
+
+## Contact
+
+For questions or support, please open an issue in the GitHub repository.
