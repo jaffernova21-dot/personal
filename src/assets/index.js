@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+import initialLetterLogo from "./logo.svg";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -47,7 +47,7 @@ import vega from "./vega.png";
 import rocket from "./rocket.png";
 
 export {
-  logo,
+  initialLetterLogo,
   backend,
   creator,
   mobile,

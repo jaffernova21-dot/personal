@@ -1,10 +1,13 @@
 "use client";
 import React, { memo, useState, useEffect, useCallback } from "react";
 import Link from "next/link";
-import { navLinks } from "@/constants/constants";
+import {
+  initialLetterIcon,
+  navLinks,
+  remainingLetters,
+} from "@/constants/constants";
 import { styles } from "@/styles";
 import { menu, close } from "@/assets";
-import logo from "@/assets/logo.svg";
 import Image from "next/image";
 
 const Navbar = memo(function Navbar() {
@@ -63,9 +66,13 @@ const Navbar = memo(function Navbar() {
           className="flex items-center gap-2"
           onClick={handleLogoClick}
         >
-          <Image src={logo} alt="logo" className="w-10 h-10 object-contain" />
+          <Image
+            src={initialLetterIcon}
+            alt="logo"
+            className="w-10 h-10 object-contain"
+          />
           <p className="text-white text-[29px] font-bold cursor-pointer flex relative right-2 ">
-            imanshu &nbsp;
+            {remainingLetters} &nbsp;
             <span className="sm:block hidden"> </span>
           </p>
         </Link>
