@@ -8,6 +8,7 @@ import {
   Works,
 } from "@/components";
 import Experience from "@/components/Experience";
+import Feedbacks from "@/components/Feedbacks";
 import IntroWrapper from "@/components/IntroWrapper";
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
               <Tech />
             </div>
             <Works />
+            {/* <Feedbacks /> */}
             <Contact />
           </div>
           <StarsCanvas />
