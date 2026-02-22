@@ -40,7 +40,7 @@ import {
 } from "../assets";
 
 const initialLetterIcon = initialLetterLogo;
-const remainingLetters = "imanshu";
+const remainingLetters = "JAFFER";
 
 export const navLinks = [
   {
